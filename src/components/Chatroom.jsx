@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react"
+import React, { useState } from "react"
 import firebase from 'firebase'
 import { firestore, auth } from '../firebase'
 import { useCollectionData } from "react-firebase-hooks/firestore"
@@ -10,7 +10,7 @@ export default function Chatroom() {
   const query = messagesRef.orderBy('createdAt').limit(50)
   const [messages] = useCollectionData(query, { idField: 'id' })
   const [formValue, setFormValue] = useState('')
-  const dummy = useRef()
+  // const dummy = useRef()
 
   const sendMessage = async(e) => {
     e.preventDefault()
