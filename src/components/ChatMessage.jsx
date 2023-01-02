@@ -6,7 +6,7 @@ export default function ChatMessage({ uid, children, photoUrl }) {
 
   return (
     <div className={`message ${messageClass}`}>
-      {photoUrl && (<img src={photoUrl} alt='user photo' />)}
+      {photoUrl && (<img src={photoUrl} alt='user avatar' />)}
       <p>{children}</p>
     </div>
   )
