@@ -8,7 +8,7 @@ body {
   margin: 0 auto;
 }
 
-.App header {
+/* .App header {
   background-color: #181717;
   height: 10vh;
   min-height: 50px;
@@ -23,7 +23,7 @@ body {
   z-index: 99;
   padding: 10px;
   box-sizing: border-box;
-}
+} */
 
 .App section {
   display: flex;
