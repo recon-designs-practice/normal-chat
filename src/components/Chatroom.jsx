@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import styled from "@emotion/styled"
 import firebase from "firebase"
 import { firestore, auth } from "../firebase"
@@ -27,7 +27,7 @@ export default function Chatroom() {
   const query = messagesRef.orderBy("createdAt").limit(50)
   const [messages] = useCollectionData(query, { idField: "id" })
   const [formValue, setFormValue] = useState("")
-  // const dummy = useRef()
+  const scrollToDiv = useRef()
 
   const sendMessage = async (e) => {
     e.preventDefault()
@@ -43,7 +43,7 @@ export default function Chatroom() {
 
     setFormValue("")
 
-    // dummy.current.scrollIntoView({ behavior: 'smooth' })
+    scrollToDiv.current.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
@@ -53,6 +53,8 @@ export default function Chatroom() {
           messages.map((msg) => {
             return <ChatMessage key={msg.id}>{msg.text}</ChatMessage>
           })}
+
+        <span ref={scrollToDiv}></span>
       </Main>
 
       <Form onsubmit={sendMessage}>
