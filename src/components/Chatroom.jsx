@@ -4,6 +4,7 @@ import firebase from "firebase"
 import { firestore, auth } from "../firebase"
 import { useCollectionData } from "react-firebase-hooks/firestore"
 import ChatMessage from "../components/ChatMessage"
+import Form from "./Form"
 import Button from "../components/Button"
 import Input from "./Input"
 
@@ -14,17 +15,6 @@ const Main = styled.main`
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
-`
-
-const Form = styled.form`
-  height: 10vh;
-  position: fixed;
-  bottom: 0;
-  background-color: rgb(24, 23, 23);
-  width: 100%;
-  max-width: 728px;
-  display: flex;
-  font-size: 1.5rem;
 `
 
 const FormButton = styled(Button)`
@@ -65,7 +55,7 @@ export default function Chatroom() {
           })}
       </Main>
 
-      <Form onSubmit={sendMessage}>
+      <Form onsubmit={sendMessage}>
         <Input 
           value={formValue}
           onchange={(e) => setFormValue(e.target.value)}        
