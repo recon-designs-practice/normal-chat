@@ -115,7 +115,7 @@ ul, li {
   list-style: none;
 }
 
-p {
+/* p {
   max-width: 500px;
   margin-bottom: 12px;
   line-height: 24px;
@@ -124,9 +124,8 @@ p {
   position: relative;
   color: white;
   text-align: center;
-  /* background: orange; */
-
-}
+  background: orange;
+} */
 
 .message {
   display: flex;
@@ -148,9 +147,9 @@ p {
   color: black;
 }
 
-img {
+/* img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   margin: 2px 5px;
-}
+} */
