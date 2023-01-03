@@ -5,6 +5,7 @@ import { firestore, auth } from "../firebase"
 import { useCollectionData } from "react-firebase-hooks/firestore"
 import ChatMessage from "../components/ChatMessage"
 import Button from "../components/Button"
+import Input from "./Input"
 
 const Main = styled.main`
   padding: 10px;
@@ -65,9 +66,9 @@ export default function Chatroom() {
       </Main>
 
       <Form onSubmit={sendMessage}>
-        <input
+        <Input 
           value={formValue}
-          onChange={(e) => setFormValue(e.target.value)}
+          onchange={(e) => setFormValue(e.target.value)}        
         />
         <FormButton>🕊️</FormButton>
       </Form>
