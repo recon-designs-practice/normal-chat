@@ -1,11 +1,9 @@
 import React from "react"
+import styled from "@emotion/styled"
 import firebase from "firebase"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth } from "../firebase"
-import styled from "@emotion/styled"
-import Header from "../components/Header"
-import Chatroom from "../components/Chatroom"
-import Button from "../components/Button"
+import { Header, Button, Chatroom } from "../components/index"
 
 const AppContainer = styled.div`
   text-align: center;
