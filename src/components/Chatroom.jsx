@@ -3,10 +3,7 @@ import styled from "@emotion/styled"
 import firebase from "firebase"
 import { firestore, auth } from "../firebase"
 import { useCollectionData } from "react-firebase-hooks/firestore"
-import ChatMessage from "../components/ChatMessage"
-import Form from "./Form"
-import Button from "../components/Button"
-import Input from "./Input"
+import { Button, Form, Input, ChatMessage } from "../components/index"
 
 const Main = styled.main`
   padding: 10px;

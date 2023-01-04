@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { auth } from "../firebase"
-import Button from "./Button"
+import { Button } from "./index"
 
 const AppHeader = styled.header`
   background-color: #181717;
