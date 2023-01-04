@@ -1,8 +1,6 @@
 import React from "react"
 import { Switch, Route } from "react-router-dom"
-import LandingPage from "./pages/Landing"
-import SignupPage from "./pages/Signup"
-import ChatPage from "./pages/Chat"
+import { LandingPage, SignupPage, ChatPage } from "./pages/index"
 import "./App.css"
 
 function App() {
