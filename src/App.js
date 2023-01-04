@@ -1,8 +1,12 @@
 import React from "react"
-import styled from "@emotion/styled"
+import { Switch, Route } from 'react-router-dom'
 import firebase from "firebase"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth } from "./firebase"
+import styled from "@emotion/styled"
+import LandingPage from './pages/Landing'
+import SignupPage from './pages/Signup'
+import ChatPage from './pages/Chat'
 import Header from "./components/Header"
 import Chatroom from "./components/Chatroom"
 import Button from "./components/Button"
@@ -32,12 +36,25 @@ function App() {
   const [user] = useAuthState(auth)
 
   return (
-    <AppContainer>
-      <Header />
-      <Section>
-        {user ? <Chatroom /> : <Button onclick={signIn}>Log in</Button>}
-      </Section>
-    </AppContainer>
+    <>
+      <Switch>
+      <Route path={'/chat'}>
+          <ChatPage />
+        </Route>
+        <Route path={'/signup'}>
+          <SignupPage />
+        </Route>
+        <Route path={'/'}>
+          <LandingPage />
+        </Route>
+      </Switch>
+    </>
+    // <AppContainer>
+    //   <Header />
+    //   <Section>
+    //     {user ? <Chatroom /> : <Button onclick={signIn}>Log in</Button>}
+    //   </Section>
+    // </AppContainer>
   )
 }
 
