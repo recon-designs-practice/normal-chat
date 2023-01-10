@@ -48,7 +48,7 @@ export default function Chatroom() {
       <Main>
         {messages &&
           messages.map((msg) => {
-            return <ChatMessage key={msg.id} uid={msg.uid}>{msg.text}</ChatMessage>
+            return <ChatMessage key={msg.id} uid={msg.uid} photoUrl={msg.photoURL}>{msg.text}</ChatMessage>
           })}
 
         <span ref={scrollToDiv}></span>
