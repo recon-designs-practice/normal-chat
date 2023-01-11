@@ -1,7 +1,6 @@
 export { default as Header } from './Header'
-// export { default as Button } from './Button'
 export { Button } from './button'
-export { default as Input } from './Input'
+export { Input } from './input'
 export { default as Form } from './Form'
 export { default as Chatroom } from './Chatroom'
 export { default as ChatMessage } from './ChatMessage'
