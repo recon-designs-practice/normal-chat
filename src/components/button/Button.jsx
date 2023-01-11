@@ -1,5 +1,6 @@
 import React from "react"
-import styled from '@emotion/styled'
+import PropTypes from "prop-types"
+import styled from "@emotion/styled"
 
 const ButtonEl = styled.button`
   background-color: #282c34;
@@ -20,6 +21,23 @@ const ButtonEl = styled.button`
 
 export default function Button({ onclick, className, children }) {
   return (
-    <ButtonEl className={className} onClick={onclick}>{children}</ButtonEl>
+    <ButtonEl className={className} onClick={onclick}>
+      {children}
+    </ButtonEl>
   )
+}
+
+Button.defaultProps = {
+  children: 'Label'
+}
+
+Button.propTypes = {
+  /**
+   * Funcion to be called when Button is clicked.
+   */
+  onclick: PropTypes.func,
+  /**
+   * Pass a string for the button label.
+   */
+  children: PropTypes.string.isRequired
 }
